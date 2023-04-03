@@ -71,7 +71,7 @@ CREATE TABLE `bkz_user` (
 --
 
 INSERT INTO `bkz_user` (`id_user`, `nome_user`, `usr_user`, `email_user`, `senha_user`, `endereco_user`, `telefone_user`, `celular_user`, `wtp_user`, `cpf_user`, `rg_user`, `dataNasc_user`, `registro_user`) VALUES
-(1, 'Elton Carlos do Nascimento', 'Zin', 'eltnas@outlook.com', 'e372105c5613c29d72c727da405912958f7f05e5', 'Rua Monsenhor Tanaka, 205', '4432228645', '44998505518', NULL, 2147483647, '101104729', '1986-09-23', '2023-03-31');
+(1, 'Elton Carlos do Nascimento', 'Zin', 'eltnas@outlook.com', 'e372105c5613c29d72c727da405912958f7f05e5', 'Rua Monsenhor Tanaka, 205', '4432228645', '44998505518', NULL, 2147483647, '000000', '1986-09-23', '2023-03-31');
 
 -- --------------------------------------------------------
 
