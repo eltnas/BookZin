@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['$login_err'])){
+        $login_err = $_SESSION['$login_err'];
+        unset($_SESSION['$login_err']);
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +18,9 @@
 <body>
 	<div id="opaco"></div>
 	<main>
+        <?php if (!empty($login_err)): ?>
+            <script>console.log('<?php echo $login_err; ?>');</script>
+        <?php endif; ?>
 		<section id="content">
 			<!-- Aqui vai todo o formulario de Login -->
 			<section id="content-phrase">
@@ -31,6 +41,7 @@
 				</div>
 				<div id="container-form">
 					<form action="./main/init/login.php" method="post" >
+						<? $_GET['login_err']; ?>
 						<input type="text" name="usrText" id="usrText" placeholder="Usuário" required />
 						<input type="password" name="usrPass" id="usrPass" placeholder="Senha" required />
 						<div id="links">

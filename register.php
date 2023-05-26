@@ -1,6 +1,6 @@
 <?php
 // Incluir arquivo de configuração
-require_once "./main/init/conn.php";
+require_once "./main/init/db_config.php";
 
 // Defina variáveis e inicialize com valores vazios
 $username = $useremail = $password = $confirm_password = "";
@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validar senha
     if(empty(trim($_POST["password"]))){
         $password_err = "Por favor insira uma senha.";     
-    } elseif(strlen(trim($_POST["password"])) < 6){
+    } elseif(strlen(trim($_POST["password"])) < 5){
         $password_err = "A senha deve ter pelo menos 6 caracteres.";
     } else{
         $password = trim($_POST["password"]);
@@ -112,7 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             $stmt->bindParam(":nome", $param_nome, PDO::PARAM_STR);
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
-            $stmt->bindParam(":pass", $param_password, PDO::PARAM_STR);
+            $stmt->bindParam(":pass", $param_pass, PDO::PARAM_STR);
             $stmt->bindParam(":endereco", $param_endereco, PDO::PARAM_STR);
             $stmt->bindParam(":telefone", $param_telefone, PDO::PARAM_STR);
             $stmt->bindParam(":celular", $param_celular, PDO::PARAM_STR);

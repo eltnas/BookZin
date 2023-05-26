@@ -1,5 +1,5 @@
 <?
-    require_once './main/init/conn.php';
+    require_once './main/init/db_config.php';
 
     // Inicia com valores vazios
 

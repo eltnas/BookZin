@@ -57,13 +57,12 @@ main #content #content-phrase #phrase #box-phrase {
   opacity: 0.8;
 }
 main #content #content-phrase #phrase #box-phrase #phrase-txt {
-  font-size: 1.8rem;
-  padding: 20px 0 10px 0;
+  font-size: 1.7rem;
+  padding: 5px 3px;
   text-align: center;
 }
 main #content #content-phrase #phrase #box-phrase #phrase-author {
   font-size: 1.1rem;
-  padding: 20px 0 10px 0;
   text-align: center;
 }
 main #content #content-form {
